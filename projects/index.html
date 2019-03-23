@@ -5,24 +5,26 @@ cbu: "Compilable but untested"
 cau: "Compilable and tested"
 projects: ["HTMLParser-rust", "JavaUtil"]
 project_descriptions: ["An HTML parser written in Rust.", "A library of utilities that I feel are missing from Java"]
-project_statuses: [cbu, cbu]
+project_statuses: ["Compilable but untested", "Compilable but untested"]
 ---
 <!DOCTYPE html>
 <html>
     <head>
         <title>My projects</title>
     </head>
-    <body style="width: 75%">
-        <h1>Projects</h1>
-        <ul>
-            {%- for i in (0..page.projects.size-1) -%}
-            <li>
-                <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
-                    {{- page.project_descriptions[i] -}}
-                </a>
-                Status: {{ page.project_statuses[i] -}}
-            </li>
-            {%- endfor -%}
-        </ul>
+    <body style="text-align: center">
+        <div style="align: left; width: 75%">
+            <h1>Projects</h1>
+            <ul>
+                {%- for i in (0..page.projects.size-1) -%}
+                <li>
+                    <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
+                        {{- page.project_descriptions[i] -}}
+                    </a>
+                    Status: {{ page.project_statuses[i] -}}
+                </li>
+                {%- endfor -%}
+            </ul>
+        </div>
     </body>
 </html>
