@@ -1,5 +1,8 @@
 ---
-html_rust_status: compilable
+permalink: /projects/
+projects: "HTMLParser-rust" | split: "|"
+project_descriptions: "An HTML parser written in Rust." | split: "|"
+project_statuses: "Compilable" | split: "|"
 ---
 <!DOCTYPE html>
 <html>
@@ -9,12 +12,14 @@ html_rust_status: compilable
     <body>
         <h1>Projects</h1>
         <ul>
+            {% for i in (1..projects.size) %}
             <li>
-                <a href="https://github.com/dragonrider7225/HTMLParser-rust">
-                    An HTML parser written in Rust. Status:
-                    {{ html_rust_status }}
+                <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
+                    {{ page.project_descriptions[i] }} Status:
+                    {{ page.project_statuses[i] }}
                 </a>
             </li>
+            {% endfor %}
         </ul>
     </body>
 </html>
