@@ -15,7 +15,7 @@ project_statuses: ["Compilable"]
             {%- for i in (0..page.projects.size-1) -%}
             <li>
                 <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
-                    {{ page.project_descriptions[i] }}
+                    {{- page.project_descriptions[i] -}}
                 </a>
                 <br/>
                 Status: {{ page.project_statuses[i] }}
