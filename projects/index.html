@@ -8,12 +8,12 @@ project_descriptions: ["An HTML parser written in Rust.", "A library of utilitie
 project_statuses: ["Compilable but untested", "Compilable but untested"]
 ---
 <!DOCTYPE html>
-<html>
+<html style="height: 100%; background-color: gainsboro">
     <head>
         <title>My projects</title>
     </head>
-    <body style: "text-align: center">
-        <div style="margin: auto; max-width: 75%">
+    <body style="height: 100%">
+        <div style="margin: auto; max-width: 75%; height: 100%; background-color: white">
             <h1>Projects</h1>
             <ul>
                 {%- for i in (0..page.projects.size-1) -%}
