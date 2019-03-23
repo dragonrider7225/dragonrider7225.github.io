@@ -12,7 +12,7 @@ project_statuses: "Compilable" | split: "|"
     <body>
         <h1>Projects</h1>
         <ul>
-            {% for i in (1..projects.size) %}
+            {% for i in (1..page.projects.size) %}
             <li>
                 <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
                     {{ page.project_descriptions[i] }} Status:
