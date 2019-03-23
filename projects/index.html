@@ -1,8 +1,8 @@
 ---
 permalink: /projects/
-projects: "HTMLParser-rust" | split: "|"
-project_descriptions: "An HTML parser written in Rust." | split: "|"
-project_statuses: "Compilable" | split: "|"
+projects: "HTMLParser-rust" | split: "&"
+project_descriptions: "An HTML parser written in Rust." | split: "&"
+project_statuses: "Compilable" | split: "&"
 ---
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@ project_statuses: "Compilable" | split: "|"
     <body>
         <h1>Projects</h1>
         <ul>
-            {% for i in (0..page.projects.size) %}
+            {% for i in (0..page.projects.size-1) %}
             <li>
                 <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
                     {{ page.project_descriptions[i] }} Status:
