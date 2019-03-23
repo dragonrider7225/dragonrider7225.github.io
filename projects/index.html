@@ -10,6 +10,9 @@ project_statuses: "Compilable" | split: "&"
         <title>My projects</title>
     </head>
     <body>
+        <p>{{ page.projects }}</p>
+        <p>{{ page.project_descriptions }}</p>
+        <p>{{ page.project_statuses }}</p>
         <h1>Projects</h1>
         <ul>
             {% for i in (0..page.projects.size-1) %}
