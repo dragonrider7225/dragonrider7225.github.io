@@ -1,28 +1,25 @@
 ---
 permalink: /projects/
+projects: ["HTMLParser-rust"]
+project_descriptions: ["An HTML parser written in Rust."]
+project_statuses: ["Compilable"]
 ---
-{% assign projects = "HTMLParser-rust" | split: ";.;" %}
-{% assign test = "This is a test" %}
-{% assign project_descriptions = "An HTML parser written in Rust." | split: ";.;" %}
-{% assign project_statuses = "Compilable" | split: ";.;" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>My projects</title>
     </head>
     <body style="width: 75%">
-        <p> {{ test }} </p>
-        <p> {{ projects.size }} </p>
-        <p> {{ projects[0] }} </p>
-        <p> {{ project_descriptions }} </p>
+        <p> {{ page.projects.size }} </p>
+        <p> {{ page.project_descriptions }} </p>
         <p> {{ page.project_statuses }} </p>
         <h1>Projects</h1>
         <ul>
-            {% for i in (0..projects.size-1) %}
+            {% for i in (0..page.projects.size-1) %}
             <li>
                 {{ i }}:
-                <a href="https://github.com/dragonrider7225/{{ projects[i] }}">
-                    {{ project_descriptions[i] }} Status:
+                <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
+                    {{ page.project_descriptions[i] }} Status:
                     {{ page.project_statuses[i] }}
                 </a>
             </li>
