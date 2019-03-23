@@ -4,12 +4,14 @@ project_descriptions: "An HTML parser written in Rust.;.;" | split: ";.;"
 project_statuses: "Compilable;.;" | split: ";.;"
 ---
 {% assign projects = "HTMLParser-rust" | split: ";.;" %}
+{% assign test = "This is a test" %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>My projects</title>
     </head>
     <body style="width: 75%">
+        <p> {{ test }} </p>
         <p> {{ projects.size }} </p>
         <p> {{ page.project_descriptions }} </p>
         <p> {{ page.project_statuses }} </p>
