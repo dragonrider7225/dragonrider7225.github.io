@@ -10,18 +10,14 @@ project_statuses: ["Compilable"]
         <title>My projects</title>
     </head>
     <body style="width: 75%">
-        <p> {{ page.projects.size }} </p>
-        <p> {{ page.project_descriptions }} </p>
-        <p> {{ page.project_statuses }} </p>
         <h1>Projects</h1>
         <ul>
             {% for i in (0..page.projects.size-1) %}
             <li>
-                {{ i }}:
                 <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
-                    {{ page.project_descriptions[i] }} Status:
-                    {{ page.project_statuses[i] }}
+                    {{ page.project_descriptions[i] }}
                 </a>
+                Status: {{ page.project_statuses[i] }}
             </li>
             {% endfor %}
         </ul>
