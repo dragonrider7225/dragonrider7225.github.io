@@ -16,7 +16,7 @@ project_statuses: ["Compilable but untested", "Compilable but untested"]
         <div style="margin: auto; max-width: 75%; height: 100%; background-color: white">
             <h1>Projects</h1>
             <ul>
-                {%- for i in (0..page.projects.size-1) -%}
+                {%- for i in (0..page.projects.size) -%}
                 <li>
                     <a href="https://github.com/dragonrider7225/{{ page.projects[i] }}">
                         {{- page.project_descriptions[i] -}}
