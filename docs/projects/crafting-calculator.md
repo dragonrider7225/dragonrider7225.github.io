@@ -1,9 +1,10 @@
 ---
 permalink: /projects/crafting-calculator
 title: crafting-calculator
+layout: project
 ---
 
-# [{{ page.title }}]({{ site.github.owner_url }}/{{ page.title }})
+## [{{ page.title }}]({{ site.github.owner_url }}/{{ page.title }})
 
 I created this project to improve my experience playing Minecraft modpacks where crafting recipes
 can be many layers deep.
